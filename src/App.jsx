@@ -32,6 +32,10 @@ function App() {
     setBarang([...barang, data]);
     setData(datadiri);
   }
+  function handleDelete(d) {
+    const dataDelete = barang.filter((item) => item.id != d);
+    setBarang(dataDelete);
+  }
 
   return (
     <div className="">
@@ -74,7 +78,15 @@ function App() {
           </svg>
         </button>
       </div>
-      {addMenu && <Form />}
+      {addMenu && (
+        <Form
+          nama={nama}
+          deskripsi={deskripsi}
+          link={ImageURL}
+          OnChange={handleOnChange}
+          OnSubmit={handleSubmit}
+        />
+      )}
       <div className="barang grid grid-cols-4 gap-5 m-12">
         {barang.map((barang) => (
           <Card
@@ -82,6 +94,7 @@ function App() {
             gambar={barang.ImageURL}
             nama={barang.nama}
             deskripsi={barang.deskripsi}
+            onClickDelete={() => handleDelete(barang.id)}
           />
         ))}
       </div>
