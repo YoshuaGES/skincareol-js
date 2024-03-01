@@ -2,7 +2,7 @@ import React from "react";
 
 const Form = ({ nama, deskripsi, link, OnChange, OnSubmit }) => {
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center pt-4">
       <form onSubmit={OnSubmit}>
         <div className="gap-2 Form grid w-96">
           <input
@@ -12,6 +12,7 @@ const Form = ({ nama, deskripsi, link, OnChange, OnSubmit }) => {
             value={nama}
             onChange={OnChange}
             name="nama"
+            id=""
           />
           <input
             className="font-extralight border-2"
@@ -20,6 +21,7 @@ const Form = ({ nama, deskripsi, link, OnChange, OnSubmit }) => {
             value={deskripsi}
             onChange={OnChange}
             name="deskripsi"
+            id=""
           />
           <input
             className="font-extralight border-2"
@@ -28,6 +30,7 @@ const Form = ({ nama, deskripsi, link, OnChange, OnSubmit }) => {
             value={link}
             onChange={OnChange}
             name="ImageURL"
+            id=""
           />
           <input
             onClick
