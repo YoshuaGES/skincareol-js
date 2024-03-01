@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 // const [nilai, setNilai] = useState(0);
-
 // const [trolley, setTrolley] = useState([]);
 
 function jumlah() {

@@ -6,27 +6,27 @@ const Form = ({ nama, deskripsi, link, OnChange, OnSubmit }) => {
       <form onSubmit={OnSubmit}>
         <div className="gap-2 Form grid w-96">
           <input
-            className="font-extralight border-2"
+            className="font-extralight border-2 rounded-lg"
             type="text"
-            placeholder="Nama"
+            placeholder=" Nama"
             value={nama}
             onChange={OnChange}
             name="nama"
             id=""
           />
           <input
-            className="font-extralight border-2"
+            className="font-extralight border-2 rounded-lg"
             type="text"
-            placeholder="Deskripsi"
+            placeholder=" Deskripsi"
             value={deskripsi}
             onChange={OnChange}
             name="deskripsi"
             id=""
           />
           <input
-            className="font-extralight border-2"
+            className="font-extralight border-2 rounded-lg"
             type="url"
-            placeholder="Link Gambar"
+            placeholder=" Link Gambar"
             value={link}
             onChange={OnChange}
             name="ImageURL"
@@ -34,7 +34,7 @@ const Form = ({ nama, deskripsi, link, OnChange, OnSubmit }) => {
           />
           <input
             onClick
-            className="font-semibold border-2 flex gap-3 justify-center"
+            className="py-1 bg-orange-400 font-semibold border-orange-300 rounded-full flex gap-4 justify-center"
             type="submit"
           />
         </div>
